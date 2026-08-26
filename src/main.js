@@ -13,7 +13,7 @@ import { initFiltering } from "./components/filtering.js";
 import { initSearching } from "./components/searching.js";
 // @todo: подключение
 
-const API = initData(sourceData); //1.1
+const API = initData();
 
 /**
  * Сбор и обработка полей из таблицы
@@ -77,7 +77,7 @@ const applySorting = initSorting([
   sampleTable.header.elements.sortByTotal,
 ]);
 
-const applySearching = initSearching(sampleTable.search.elements.search);
+const applySearching = initSearching('search');
 
 const { applyFiltering, updateIndexes } = initFiltering(
   sampleTable.filter.elements,
